@@ -3,7 +3,7 @@ from typing import List
 
 import serial
 
-from src.yaml_manager import Yaml
+from yaml_manager import Yaml
 
 
 class V209SGateway:
