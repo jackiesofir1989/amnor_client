@@ -8,7 +8,7 @@ from yaml_manager import Yaml
 
 
 async def trade_information():
-    gateway = V209SGateway(Yaml('src/config.yaml'))
+    gateway = V209SGateway(Yaml('amnor_client/src/config.yaml'))
     gateway.init_v209s_parameters()
     headers = {'content-type': 'application/json'}
     while True:
