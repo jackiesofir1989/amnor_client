@@ -1,0 +1,9 @@
+api_path: http://{call_address}/transport/response/{serial_number}
+buad_rate: 9600
+call_address: 127.0.0.1:8000
+hops: 5
+max_packet_size: 140
+net_id: 0
+port: /dev/ttyUSB0
+serial_number: '0101.0001'
+timeout: 0.25

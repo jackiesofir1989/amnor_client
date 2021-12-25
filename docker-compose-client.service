@@ -1,0 +1,18 @@
+# /etc/systemd/system/docker-client.service
+
+[Unit]
+Description=Docker Client Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/srv/docker ---- Change to Path
+ExecStart=/usr/local/bin/docker run -t -i --privileged -v /dev:/dev ubuntu bash
+ExecStop=/usr/local/bin/docker stop
+TimeoutStartSec=0
+Restart=on-failure
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target
